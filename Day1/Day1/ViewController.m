@@ -71,11 +71,36 @@
     view.alpha = .5;
     view.hidden = NO;
     view.opaque = NO; // set is show transparent
-    [view removeFromSuperview]; // 讲自己从父视图rm 
+    [view removeFromSuperview]; // 讲自己从父视图rm
+}
+-(void) renderView {
+    UIView* viewOne = [[UIView alloc] init];
+    viewOne.frame = CGRectMake(100,100,150,150);
+    viewOne.backgroundColor = [UIColor blueColor];
+    UIView* viewTwo = [[UIView alloc] init];
+    viewTwo.frame = CGRectMake(125,125,150,150);
+    viewTwo.backgroundColor = [UIColor orangeColor];
+    UIView* viewTree = [[UIView alloc] init];
+    viewTree.frame = CGRectMake(150,150,150,150);
+    viewTree.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:viewOne];
+    [self.view addSubview:viewTwo];
+    [self.view addSubview:viewTree];
+//    将某一个视图调整到最前面显示
+    [self.view bringSubviewToFront:viewOne];
+    [self.view bringSubviewToFront:viewTree];
+//    将某一个视图调整到最后面显示
+    [self.view sendSubviewToBack:viewTwo];
+//    subviews 管理all self.view的子视图数组
+    UIView* viewFront = self.view.subviews[0];
+    UIView* viewBack = self.view.subviews[2];
+
+//    [viewTwo removeFromSuperview]; // 讲自己从父视图rm
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self renderView];
     [self createUI];
     [self createUIRectButton];
     [self createImagebtn];
