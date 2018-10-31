@@ -13,10 +13,43 @@
 @end
 
 @implementation AppDelegate
-
+//当程序框架初始化成功后t调用此函数
+//次函数用来初始化整个程序框架结构
+//整个程序对ios开发工程师的入口函数
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    创建一个UIWWindow对象
+//    整个程序中只有一个UIWindowdui对象
+//    在程序基本上表示屏幕窗口
+//    UIWindow也是集成于UIView
+//    UIWindow是一个特殊的UIView
+//    UIScreen表示屏幕硬件表示类
+//    mainScreen获得主屏幕设备信息
+//    bounds表示屏幕的宽高值
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    创建一个视图控制器做为UIWindowd跟视图控制器
+    self.window.rootViewController = [[UIViewController alloc] init];
+//    设置背景颜色
+    self.window.backgroundColor = [UIColor blueColor];
+    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = [UIColor orangeColor];
+//    背景视图
+    UIView* backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 240, 360)];
+    backView.backgroundColor = [UIColor greenColor];
+//    将backView做为view的父亲视图
+//    子视图的坐标是参照父亲视图的坐标系
+//    当父亲视图移动时，所有的子视图都会移动
+    [backView addSubview:view];
+    [self.window addSubview:backView];
+//    b每一个View都有一个window属性
+    view.window;
+    backView.window;
+//    使window有效并显示到屏幕上
+    [self.window makeKeyAndVisible];
+    NSLog(@"%@",view.window);
+    NSLog(@"%@",backView.window);
+    NSLog(@"%@",self.window);
     return YES;
 }
 
