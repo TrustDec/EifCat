@@ -67,6 +67,7 @@
     UIView* view = [[UIView alloc] init];
     view.frame = CGRectMake(100, 200, 100, 100);
     view.backgroundColor = [UIColor orangeColor];
+//    将视图添加到当前控制视图上
     [self.view addSubview:view];
     view.alpha = .5;
     view.hidden = NO;
@@ -97,7 +98,10 @@
 
 //    [viewTwo removeFromSuperview]; // 讲自己从父视图rm
 }
+//当视图控制器第一次被加载显示视图时，调用此函数
+//布局初始化是视图使用,初始化资源
 - (void)viewDidLoad {
+//    调用父类的视图加载
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self renderView];
@@ -108,5 +112,9 @@
     NSLog(@"我拍死了Xcode");
 }
 
-
+//当系统内存过低时，会发起警告信息，调用次函数 课程有
+-(void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    NSLog(@"内存过低");
+}
 @end

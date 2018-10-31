@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,30 @@
 //整个程序对ios开发工程师的入口函数
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    创建一个UIWWindow对象
-//    整个程序中只有一个UIWindowdui对象
+   // Override point for customization after application launch.
+    /*
+        UIViewController基础
+     */
+//    创建AppDelegate的属性
+//    UIScreen表示屏幕硬件表示类
+//    mainScreen获得主屏幕信息
+//    当前主屏幕的大小
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    创建视图控制器对象
+    ViewController* vcRoot = [[ViewController alloc] init];
+//    对窗口的根视图控制器进行赋值操作
+//    整个UIKit框架中只有一个根视图控制器，属于window的属性
+//    视图控制器用来管理界面和处理界面的逻辑对象
+//    程序启动前必须对根视图控制器赋值
+    self.window.rootViewController = vcRoot;
+//    将window做为主视图并且显示出来
+    [self.window makeKeyAndVisible];
+    
+ /**
+  * UIWindow 对象
+  del Main storyboard file base name=UIMainStoryboardFile
+//    创建一个UIWindow对象
+//    整个程序中只有一个UIWindow对象
 //    在程序基本上表示屏幕窗口
 //    UIWindow也是集成于UIView
 //    UIWindow是一个特殊的UIView
@@ -50,6 +72,7 @@
     NSLog(@"%@",view.window);
     NSLog(@"%@",backView.window);
     NSLog(@"%@",self.window);
+  */
     return YES;
 }
 

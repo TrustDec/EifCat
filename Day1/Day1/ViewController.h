@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//所有的控制器都需要自定义来完成
+//集成于官方的UIViewController
 @interface ViewController : UIViewController
 
 
