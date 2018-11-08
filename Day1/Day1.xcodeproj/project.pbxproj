@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15F0E0F2191E97500A7643E /* ViewC02.m in Sources */ = {isa = PBXBuildFile; fileRef = C15F0E0E2191E97500A7643E /* ViewC02.m */; };
 		C17FDDE32183542800861997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C17FDDE22183542800861997 /* AppDelegate.m */; };
 		C17FDDE62183542800861997 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17FDDE52183542800861997 /* ViewController.m */; };
 		C17FDDE92183542800861997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17FDDE72183542800861997 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C15F0E0D2191E97500A7643E /* ViewC02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewC02.h; sourceTree = "<group>"; };
+		C15F0E0E2191E97500A7643E /* ViewC02.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewC02.m; sourceTree = "<group>"; };
 		C17FDDDE2183542800861997 /* Day1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17FDDE12183542800861997 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C17FDDE22183542800861997 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				C17FDDE22183542800861997 /* AppDelegate.m */,
 				C17FDDE42183542800861997 /* ViewController.h */,
 				C17FDDE52183542800861997 /* ViewController.m */,
+				C15F0E0D2191E97500A7643E /* ViewC02.h */,
+				C15F0E0E2191E97500A7643E /* ViewC02.m */,
 				C17FDDE72183542800861997 /* Main.storyboard */,
 				C17FDDEA2183542A00861997 /* Assets.xcassets */,
 				C17FDDEC2183542A00861997 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15F0E0F2191E97500A7643E /* ViewC02.m in Sources */,
 				C17FDDE62183542800861997 /* ViewController.m in Sources */,
 				C17FDDF12183542A00861997 /* main.m in Sources */,
 				C17FDDE32183542800861997 /* AppDelegate.m in Sources */,
